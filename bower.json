@@ -1,0 +1,27 @@
+{
+  "name": "OverAchiever",
+  "homepage": "https://github.com/emkographics/Polymer2-Overachiever",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Emir Memic"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "paper-checkbox": "^2.0.4",
+    "paper-material": "^2.1.0",
+    "paper-icon-button": "^2.2.0",
+    "paper-button": "^2.1.1",
+    "paper-input": "^2.2.2",
+    "iron-icons": "^2.1.1",
+    "iron-input": "^2.1.2"
+  }
+}

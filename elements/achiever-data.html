@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="achiever-data">
+    <script>
+        class AchieverData extends Polymer.Element {
+            static get is() { return 'achiever-data' }
+            static get properties() {
+                return {
+                    achievements: {
+                        type: Array,
+                        notify: true,
+                        value: [
+                            {
+                                name: 'Buy some milk',
+                                done: true,
+                                archive: false
+                            },
+                            {
+                                name: 'Learn Polymer',
+                                done: false,
+                                archive: false
+                            },
+                            {
+                                name: 'Clean house',
+                                done: true,
+                                archive: false
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+        window.customElements.define(AchieverData.is, AchieverData);
+    </script>
+</dom-module>

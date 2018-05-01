@@ -1,0 +1,42 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../elements/achiever-item.html">
+<dom-module id="achiever-list">
+    <template>
+       <ul>
+            <template is="dom-repeat" as="stone" items="{{achievements}}" observe="done" filter="{{_filter(filterBy)}}">
+                <achiever-item stone="{{stone}}"></achiever-item>
+            </template>
+       </ul>
+    </template>
+
+    <script>
+        class AchieverList extends Polymer.Element {
+            static get is() { return 'achiever-list' }
+            static get properties() {
+                return {
+                    filterBy: {
+                        type: String,
+                        value: 'all'
+                    }
+                }
+            }
+            _filter(filterBy) {
+                return function(stone) {
+                    if(filterBy == 'all') {
+                        return true;
+                    }
+                    else if(filterBy === 'uncompleted') {
+                        return !stone.done;
+                    }
+                    else if(filterBy === 'completed') {
+                        return stone.done;
+                    }
+                    else {
+                        return false;
+                    }
+                }
+            }
+        }
+        window.customElements.define(AchieverList.is, AchieverList);
+    </script>
+</dom-module>

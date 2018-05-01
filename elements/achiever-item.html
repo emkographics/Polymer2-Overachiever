@@ -1,0 +1,23 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+
+<dom-module id="achiever-item">
+    <style>
+        paper-material {
+            padding: 10px 0px 10px 10px;
+        }
+    </style>
+    <template>
+        <paper-button elevation="1">
+            <paper-checkbox checked="{{stone.done}}">{{stone.name}}</paper-checkbox>
+        </paper-button>
+    </template>
+
+    <script>
+        class AchieverItem extends Polymer.Element {
+            static get is() { return 'achiever-item' }
+        }
+        window.customElements.define(AchieverItem.is, AchieverItem);
+    </script>
+</dom-module>
